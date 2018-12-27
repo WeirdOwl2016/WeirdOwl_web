@@ -1,0 +1,13 @@
+[
+  {
+    "page": "rule/rule",
+    "thunks": [ "js/plugins/111.js"]
+  },
+  {
+    "page": "404/404",
+    "thunks": ["js/plugins/111.js"]
+  },
+  {
+    "page": "500/500"
+  }
+]

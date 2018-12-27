@@ -1,0 +1,43 @@
+<link rel="stylesheet" type="text/css" href="{{staticURL}}/css/other.min.css" />
+<div class="container" id="reportErrors">
+    <div class=" wb80 mc clearfix">
+
+        <!--connt_right-->
+        <div id="wh" class="borderg mt40 fr wb100 pr pt30 pl10" style="min-height:298px; height:auto; _height:298px;">
+            <!-- <div class="view_404 clearfix w615 pa">
+                <div class="imgdiv floatl pr">
+                    <img src="{{staticURL}}/images/404.png">
+                    <p class="wc pa">400</p>
+                </div>
+            </div> -->
+            {{#each data}}
+            <p class="f14 of">
+                <span class="ml20 fl">【{{head.time}}】 </span>
+                <span class="ml20 fl w100">状态：&ensp;{{head.returnCode}}</span>
+                <span class="ml20 fl w300">url地址:&ensp;{{head.url}}</span>
+                <span class="ml20 fl">错误信息：{{head.returnMsg}} </span>
+            </p>{{/each}}
+            <span class="f16"></span>
+            <!-- <div class="view_404 clearfix w615 pa"> -->
+            <!-- <div class="imgdiv floatl pr">
+                    <img src="{{staticURL}}/images/404.png">
+                    <p class="wc pa">400</p>
+                </div> -->
+            <!-- <p class="fgray f14 mt10"> -->
+
+            <!-- 您可以：&nbsp;|&nbsp;<a href="javascript:history.go(-1);" class="fblue">返回上级页面</a>&nbsp;|&nbsp; -->
+            <!-- </p> -->
+            <!-- </div> -->
+        </div>
+        <!--connt_right end-->
+    </div>
+</div>
+<script type="text/javascript" src="{{staticURL}}/js/plugIns/jquery.min.js"></script>
+<script type="text/javascript" src="{{staticURL}}/js/main.min.js"></script>
+<script>
+    $(function () {
+        $('#custmerok').on('click', function () {
+            window.location.href = '/'
+        })
+    })
+</script>

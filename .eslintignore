@@ -1,0 +1,10 @@
+webpack/*.js
+gulp/
+config/*.js
+node_modules/
+dist/
+src/web/js/hyh
+.Ds_Stire
+npm-debug.log*
+test/
+.idea

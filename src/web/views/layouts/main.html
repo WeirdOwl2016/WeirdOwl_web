@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <link rel="shortcut icon" href="{{staticURL}}/images/32X32.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="{{staticURL}}/css/theme.css">
+    <meta name="keywords" content="{{keywords}}">
+      <meta name="description" content="{{description}}">
+      <style>
+          td{
+            max-width: 500px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+      </style>
+    <script>
+        var userinfo = '{{userInfo.head.returnCode}}';
+        var staticURL ='{{staticURL}}';
+        var pagePower = {{{toJsonString pagePower}}};
+    </script>
+</head>
+<body>
+    <img src="../../assets//images/bg_160375_Redbas@2x.png" />
+{{{body}}}
+</body>
+</html>

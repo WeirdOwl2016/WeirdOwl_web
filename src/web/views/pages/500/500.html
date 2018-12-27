@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="{{staticURL}}/css/other.min.css"/>
+<div class="container" id="reportErrors">
+    <div class="w1100 mc clearfix">
+        <!--connt_right-->
+        <div id="wh" class="borderg mt40 fr wb100 pr" style="min-height:298px; height:auto; _height:298px;">
+            <div class="view_404 clearfix w615 pa">
+                <div class="imgdiv floatl pr">
+                    <img src="../../../assets/images/bg_160375_Redbas@2x.png">
+                    <p class="wc pa">500</p>
+                </div>
+                <p class="fgray f14 mt10">
+                    <span class="f16">网络异常，请刷新重试！</span><br><span style="display:none;" class="f16">{{err}}</span>
+                    您可以：&nbsp;|&nbsp;<a href="javascript:history.go(-1);" class="fblue">返回上级页面</a>&nbsp;|&nbsp;
+                </p>
+            </div>
+        </div>
+        <!--connt_right end-->
+    </div>
+</div>
+<script type="text/javascript" src="{{staticURL}}/js/plugIns/jquery.min.js"></script>
+<script type="text/javascript" src="{{staticURL}}/js/main.min.js"></script> 
+<script>
+    $(function () {
+        $('#custmerok').on('click', function () {
+            window.location.href = '/'
+        })
+    })
+</script>

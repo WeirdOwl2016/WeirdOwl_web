@@ -1,3 +1,4 @@
 require('./rule.css')
-var b = 9
-var d=0
+const rules = require('./config')
+const dd = new rules()
+console.log(rules, dd)

@@ -25,6 +25,7 @@ MyPlugin.prototype.apply = function (compiler) {
           }
         }
       } 
+      goalJs = goalJs.reverse()
     })
     // 由于mini-css-extract-plugin插件是吧css插入到head标签中，暂时没有找到不自动插入head中的设置，所以在最终生成的html中处理一下
     compilation.plugin('html-webpack-plugin-after-html-processing', function (htmlPluginData, callback) {

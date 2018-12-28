@@ -9,6 +9,7 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin') // 打包编译
 // const providePlugin = new webpack.ProvidePlugin({$: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery'}) // 引入jquery
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const autoprefixer = require('autoprefixer')
+const isProd = process.env.NODE_ENV === 'production'
 // 自定义插件
 const myPluginshtml = require('./myPluginshtml')
 const path = require('path')
@@ -54,6 +55,8 @@ var imgLoader = {
   ],
   exclude: /node_modules/
 }
+// add commom.js
+myPluginshtml.entry.conmmon = './src/web/assets/js/wo/index.js'
 module.exports = {
   mode: 'development', // development  production
   entry: myPluginshtml.entry,
@@ -101,19 +104,7 @@ module.exports = {
   //   verbose: true, // 开启在控制台输出信息
   //   dry: false // 启用删除文件
   // })]),
-  devtool: 'eval-source-map',
-  // devServer: {
-  //   contentBase: path.join(__dirname, '../dist'), // 静态文件根目录
-  //   port: 3824, // 端口
-  //   host: 'localhost',
-  //   hot: true,
-  //   overlay: true,
-  //   compress: false // 服务器返回浏览器的时候是否启动gzip压缩
-  // },
-  // watch: true, // 开启监听文件更改，自动刷新
-  // watchOptions: {
-  //   ignored: /node_modules/, // 忽略不用监听变更的目录
-  //   aggregateTimeout: 500, // 防止重复保存频繁重新编译,500毫米内重复保存不打包
-  //   poll: 1000 // 每秒询问的文件变更的次数
-  // }
+  devtool: isProd
+  ? false
+  : 'eval-source-map'
 }

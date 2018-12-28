@@ -1,4 +1,4 @@
-class woBase {
+class WeirdOwlBase {
   /**
     * 序列化地址参数
     */
@@ -67,4 +67,4 @@ class woBase {
   }
 }
 
-module.exports = woBase
+module.exports = WeirdOwlBase

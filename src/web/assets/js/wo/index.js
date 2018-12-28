@@ -1,5 +1,5 @@
-const woBase = require('./base')
-class wo extends woBase {
+const WeirdOwlBase = require('./WeirdOwlBase')
+class WeirdOwl extends WeirdOwlBase {
   constructor(options) {
     super()
   }
@@ -8,4 +8,4 @@ class wo extends woBase {
   }
 }
 
-window.wo = wo
+window.WeirdOwl = WeirdOwl

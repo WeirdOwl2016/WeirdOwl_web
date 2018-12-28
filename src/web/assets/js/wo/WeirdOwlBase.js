@@ -2,7 +2,7 @@ export default class WeirdOwlBase {
   /**
     * 序列化地址参数
     */
-  urlStringify (url, query = {}) {
+  urlStringify(url, query = {}) {
     var _url = url || ''
     var _query = query || {}
     for (var key in _query) {

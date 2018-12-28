@@ -1,4 +1,4 @@
 require('./rule.css')
-const rules = require('./config')
+const rules = require('./ruleClass')
 const dd = new rules()
 console.log(rules, dd)

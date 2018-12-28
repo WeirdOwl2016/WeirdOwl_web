@@ -2,7 +2,7 @@
   "presets":[
       ["env",{
           "targets":{
-              "browsers":"last 2 versions"
+              "browsers":"last 2 versions, > 1%, ie >= 8, Android >= 4, iOS >= 6, and_uc > 9"
           }
       }
       ]],

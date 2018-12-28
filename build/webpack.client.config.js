@@ -5,7 +5,6 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const HappyPack = require('happypack')
 const os = require('os') // 获取电脑的处理器有几个核心，作为配置传入
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })
-const ProgressBarPlugin = require('progress-bar-webpack-plugin') // 打包编译时显示进度条
 // const providePlugin = new webpack.ProvidePlugin({$: 'jquery', jQuery: 'jquery', 'window.jQuery': 'jquery'}) // 引入jquery
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const autoprefixer = require('autoprefixer')
@@ -67,12 +66,12 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /.js$/, exclude: /node_modules/, use: ['babel-loader'] },
+      { test: /.js$/, exclude: /node_modules/, use: ['babel-loader']
+      },
       cssLoader,
       imgLoader
     ]
   },
-  // postcss:[autoprefixer({browsers:['last 2 versions']})],
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
@@ -85,10 +84,6 @@ module.exports = {
     new OptimizeCSSPlugin({
       cssProcessorOptions: { safe: true }
     }),
-    // new ProgressBarPlugin({
-    //   // format: '  build [:bar] ' + chalk.green.bold(':percent') + ' (:elapsed seconds)',
-    //   // clear: false
-    // }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
@@ -98,12 +93,12 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: path.resolve(__dirname, '../src/web/assets/js/plugins'), to: 'plugins', force: true }
     ], { debug: 'info', copyUnmodified: true })
-  ].concat(myPluginshtml.plugins),
-  // .concat([new CleanWebpackPlugin(['dist'], {
-  //   root: path.resolve(__dirname, '..'), // 根目录
-  //   verbose: true, // 开启在控制台输出信息
-  //   dry: false // 启用删除文件
-  // })]),
+  ].concat(myPluginshtml.plugins)
+  .concat([new CleanWebpackPlugin(['dist'], {
+    root: path.resolve(__dirname, '..'), // 根目录
+    verbose: true, // 开启在控制台输出信息
+    dry: false // 启用删除文件
+  })]),
   devtool: isProd
   ? false
   : 'eval-source-map'

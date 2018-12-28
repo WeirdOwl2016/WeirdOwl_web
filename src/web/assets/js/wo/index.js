@@ -1,10 +1,8 @@
-const WeirdOwlBase = require('./WeirdOwlBase')
+import WeirdOwlBase from './WeirdOwlBase'
+import { constants } from 'fs';
 class WeirdOwl extends WeirdOwlBase {
-  constructor(options) {
-    super()
-  }
-  page () {
-
+  constructor(props) {
+    super(props)
   }
 }
 

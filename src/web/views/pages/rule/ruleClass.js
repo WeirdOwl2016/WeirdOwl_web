@@ -1,4 +1,5 @@
-class rules extends WeirdOwl {
-   is () {} 
+export default class Rules extends WeirdOwl {
+  constructor(props) {
+    super(props)
+  }
 }
-module.exports =rules

@@ -1,4 +1,4 @@
 require('./rule.css')
-const rules = require('./ruleClass')
-const dd = new rules()
-console.log(rules, dd)
+import Rules from './ruleClass'
+const dd = new Rules()
+console.log(Rules, dd)

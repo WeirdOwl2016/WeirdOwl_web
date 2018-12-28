@@ -1,4 +1,4 @@
-class WeirdOwlBase {
+export default class WeirdOwlBase {
   /**
     * 序列化地址参数
     */
@@ -66,5 +66,3 @@ class WeirdOwlBase {
     return intSum + dot
   }
 }
-
-module.exports = WeirdOwlBase

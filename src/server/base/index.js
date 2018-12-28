@@ -2,7 +2,7 @@
  * @Author: WeirdOwl
  * @Date: 2018-12-24 17:49:04
  * @Last Modified by: WeirdOwl
- * @Last Modified time: 2018-12-28 09:45:17
+ * @Last Modified time: 2018-12-28 09:47:30
  */
 // express jade
 // res.render('index',{title:"hehe",test:"23"})
@@ -102,12 +102,20 @@ module.exports = {
     const url = this.apisObject[urlkey]
     handel(req, url, this, (data = {}, config = {}) => {
       const status = config.status || 200
-      // 如果有存入的cookie 放入
+      // If there is a cookie saved, put it in
       if (config.cookies) {
         const cookies = config.cookies
         delete config.cookies
         for (const key in cookies) {
           res.cookie(key, cookies[key], cookieConfig)
+        }
+      }
+      // Clean up cookies
+      if (config.clearCookies) {
+        const clearCookies = config.clearCookies
+        delete config.clearCookies
+        for (const key in clearCookies) {
+          res.clearCookie(key)
         }
       }
       res.status(status).send(data)

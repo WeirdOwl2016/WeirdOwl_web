@@ -3,6 +3,9 @@
     "page": "document/server/install_doc/install_doc"
   },
   {
+    "page": "document/server/page_config/page_config"
+  },
+  {
     "page": "404/404",
     "thunks": ["plugins/111.js"]
   },

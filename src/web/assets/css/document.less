@@ -6,16 +6,37 @@ body{
     left:0;
 }
 .document{
-    width: 1400px;
+    width: 1200px;
     height:100%;
     margin: 0 auto;
     a:hover{
         .c(@color5);
     }
+    h1{
+        .lh_center(40);
+    }
+    code{
+        display: block;
+        line-height: 1.8;
+        font-family: Menlo,Monaco,Consolas,Courier,monospace;
+        padding: 18px 24px;
+        .black_c(@color6);
+        .border(1, @color7);
+        margin: 10px 0 20px 0;
+        border-radius: 4px;
+    }
+    .notice{
+        margin: 15px 0;
+        .border_l(4, @color5);
+        .black_c(@color8);
+        line-height: 20px;
+        border-radius: 4px;
+        padding: 20px;
+    }
 }
 
 .docleft{
-    width:300px;
+    width:200px;
     height:100%;
     padding:0 10px;
     overflow: auto;
@@ -36,9 +57,12 @@ body{
     dd{
         .lh_center(25);
     }
+    .on{
+        .c(@color5);
+    }
 }
 .docright{
-    .mleft(300);
+    .mleft(200);
     .doc_nav{
         .lh_center(50);
         a{

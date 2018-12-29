@@ -2,7 +2,7 @@
  * @Author: WeirdOwl
  * @Date: 2018-12-24 17:43:25
  * @Last Modified by: WeirdOwl
- * @Last Modified time: 2018-12-27 12:55:33
+ * @Last Modified time: 2018-12-29 18:06:49
  */
 const path = require('path')
 const {logInfo} = require('../log4')
@@ -30,9 +30,11 @@ const render = function (pageConfig = {}, data = {}) {
   _pageConfig.helpers = {...helpers, ..._pageConfig.helpers}
   this.renderPage(view, {
     ..._pageConfig,
+    pageSign: pageConfig.pageSign || this.req.path.replace(/\//, '').replace(/\//g, '_'),
     staticURL,
     pagToken,
-    userInfo: this.locals.userInfo || null
+    userInfo: this.locals.userInfo || null,
+    ...data
   })
 }
 const render404 = function (req, res) {

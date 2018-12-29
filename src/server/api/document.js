@@ -27,5 +27,14 @@ module.exports = [
     description: '',
     // controller: 'rules/index',
     requireType: 'GET'
+  },
+  {
+    url: '/document/page',
+    title: message.INDEX01,
+    view: 'document/server/page_config/page_config',
+    layout: 'main',
+    description: '',
+    // controller: 'rules/index',
+    requireType: 'GET'
   }
 ]

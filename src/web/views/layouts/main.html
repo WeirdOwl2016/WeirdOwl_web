@@ -6,23 +6,27 @@
     <link rel="shortcut icon" href="{{staticURL}}/images/32X32.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="{{staticURL}}/css/conmmon.css">
     <meta name="keywords" content="{{keywords}}">
-      <meta name="description" content="{{description}}">
-      <style>
-          td{
-            max-width: 500px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-      </style>
-    <script>
-        var userinfo = '{{userInfo.head.returnCode}}';
-        var staticURL ='{{staticURL}}';
-        var pagePower = {{{toJsonString pagePower}}};
-    </script>
+    <meta name="description" content="{{description}}">
 </head>
 <body>
-    <img src="../../assets//images/bg_160375_Redbas@2x.png" />
-{{{body}}}
+    <div id="document" class="document">
+        <div class="docleft pa">
+            <h1 class="f20 fblack pf">DOCUMENT</h1>
+            <dl class="docleft_dl fblack_l f14">
+                <dt class="f16">开发指南</dt>
+                <dd >
+                    <a class="fblack_ll">安裝</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="docright fblack_ll">
+            <div class="doc_nav right">
+                <a class="fblack_ll">开发指南</a>
+                <a class="fblack_ll">Server</a>
+                <a class="fblack_ll">Client</a>
+            </div>
+            {{{body}}}
+        </div>
+    </div>
 </body>
 </html>

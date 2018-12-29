@@ -13,10 +13,11 @@ const isProd = process.env.NODE_ENV === 'production'
 const myPluginshtml = require('./myPluginshtml')
 const path = require('path')
 var cssLoader = {
-  test: /\.(sa|sc|c)ss$/,
+  test: /\.(sa|sc|c|le)ss$/,
   use: [
     MiniCssExtractPlugin.loader,
     'css-loader',
+    'less-loader',
     {
       // 使用postcss时候必须要有选项，并且选项中必须有内容
       // 否则会报错：No Postcss config found.
@@ -55,7 +56,7 @@ var imgLoader = {
   exclude: /node_modules/
 }
 // add commom.js
-myPluginshtml.entry.conmmon = './src/web/assets/js/wo/index.js'
+myPluginshtml.entry.conmmon = './src/web/assets/js/index.js'
 module.exports = {
   mode: 'development', // development  production
   entry: myPluginshtml.entry,

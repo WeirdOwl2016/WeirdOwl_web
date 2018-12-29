@@ -1,0 +1,150 @@
+/*
+ * @Author: WeirdOwl 
+ * @Date: 2018-12-28 17:24:32 
+ * @Last Modified by: WeirdOwl
+ * @Last Modified time: 2018-12-29 15:37:56
+ */
+html,
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+dl,
+dt,
+dd,
+input,
+textarea,
+button,
+select {
+  font-family: "Microsoft YaHei", "微软雅黑", "Arial", "宋体", "Times New Roman",
+    Times, serif;
+}
+* {
+    word-wrap: break-word;
+    word-break: break-all;
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+ul li,
+ol li {
+  list-style: none;
+}
+img {
+  border: none;
+  vertical-align: middle;
+}
+table {
+  border-collapse: collapse;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+a:hover {
+    text-decoration: none;
+}
+input,
+td,
+a,
+a:focus,
+.nlight,
+.nlight:hover,
+.nlight:focus {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  outline: none;
+  -moz-outline-style: none;
+}
+input::-ms-clear {
+  display: none;
+}
+input {
+  border: 0;
+}
+
+.left{
+  text-align: left;
+}
+
+.right{
+  text-align: right;
+}
+
+.center{
+  text-align: center;
+}
+
+.block {
+  display: block;
+}
+.none {
+  display: none;
+}
+.inline {
+  display: inline-block;
+}
+
+.cursor {
+  cursor: pointer;
+}
+.ws {
+  overflow: hidden;
+  word-wrap: normal;
+  word-break: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pa {
+  position: absolute;
+}
+.pr {
+  position: relative;
+}
+.pf {
+  position: fixed;
+}
+
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+
+
+/****filter****/
+.filter5 {
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+.filter1 {
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.filter0 {
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

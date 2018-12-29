@@ -1,0 +1,1 @@
+require("./install_doc.css")

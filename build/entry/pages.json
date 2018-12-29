@@ -1,7 +1,6 @@
 [
   {
-    "page": "rule/rule",
-    "thunks": [ "plugins/111.js"]
+    "page": "document/server/install_doc/install_doc"
   },
   {
     "page": "404/404",

@@ -1,4 +1,4 @@
-require('../../css/index.css')
+require('../../css/index.less')
 import WeirdOwlBase from './WeirdOwlBase'
 class WeirdOwl extends WeirdOwlBase {
   constructor(props) {

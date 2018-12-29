@@ -1,0 +1,8 @@
+
+.font-size(@n, @i: 12) when (@i =< @n) {
+    .f@{i} {
+        font-size: @i*@one;
+    }
+    .font-size(@n, (@i + 2));
+}
+.font-size(50);

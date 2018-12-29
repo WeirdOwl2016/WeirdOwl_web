@@ -2,7 +2,7 @@
  * @Author: yueLanFengHua
  * @Date: 2018-10-10 16:58:54
  * @Last Modified by: WeirdOwl
- * @Last Modified time: 2018-12-26 17:50:15
+ * @Last Modified time: 2018-12-28 17:03:57
  */
 const HtmlWebpackPlugin = require('html-webpack-plugin') // 是生成html文件
 
@@ -18,6 +18,7 @@ const buildEntryPath = './build/entry' // entry配置地址
  */
 function getEntry () {
   let plugins = []
+  let trueThunks = {} // 用于后面处理额外的参数&资源
   const layoutsPath = path.join(tplPath, '..', 'layouts')
   const outlayoutsPath = path.join(outTplPath, 'layouts')
   const layoutFilesList = fs.readdirSync(layoutsPath)
@@ -27,8 +28,9 @@ function getEntry () {
       template: 'html-withimg-loader!' + path.join(layoutsPath, flie),
       // template: 'html-withimg-loader!./src/web/tpl/index.html',
       filename: OutFileName,
-      chunks: []
+      chunks: ['conmmon']
     }))
+    trueThunks[OutFileName] = ['layout']
   })
   const partialsPath = path.join(tplPath, '..', 'partials')
   const outpartialsPath = path.join(outTplPath, 'partials')
@@ -40,13 +42,14 @@ function getEntry () {
       template: 'html-withimg-loader!' + path.join(partialsPath, flie),
       // template: 'html-withimg-loader!./src/web/tpl/index.html',
       filename: OutFileName,
-      chunks: []
+      chunks: ['conmmon']
     }))
+    trueThunks[OutFileName] = ['partial']
   })
   // 读取文件列表
   let configPathsFileList = fs.readdirSync(buildEntryPath)
   let entry = {}
-  let trueThunks = {} // 用于后面处理额外的参数&资源
+  
   configPathsFileList.map(_path => {
     if (_path === '.svn') { return false }
     try {

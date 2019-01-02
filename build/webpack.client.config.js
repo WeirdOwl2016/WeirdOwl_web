@@ -56,7 +56,7 @@ var imgLoader = {
   exclude: /node_modules/
 }
 // add commom.js
-myPluginshtml.entry.conmmon = './src/web/assets/js/index.js'
+// myPluginshtml.entry.conmmon = './src/web/assets/js/index.js'
 module.exports = {
   mode: 'development', // development  production
   entry: {...myPluginshtml().entry, conmmon: './src/web/assets/js/index.js'},
@@ -94,7 +94,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: path.resolve(__dirname, '../src/web/assets/js/plugins'), to: 'plugins', force: true }
     ], { debug: 'info', copyUnmodified: true })
-  ].concat(myPluginshtml.plugins)
+  ].concat(myPluginshtml().plugins)
   .concat([new CleanWebpackPlugin(['dist'], {
     root: path.resolve(__dirname, '..'), // 根目录
     verbose: true, // 开启在控制台输出信息

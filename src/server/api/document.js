@@ -23,7 +23,7 @@ module.exports = [
     url: '/document/install',
     title: message.INDEX01,
     view: 'document/server/install_doc/install_doc',
-    layout: 'main',
+    layout: 'main_test',
     description: '',
     // controller: 'rules/index',
     requireType: 'GET'
@@ -32,7 +32,7 @@ module.exports = [
     url: '/document/page',
     title: message.INDEX01,
     view: 'document/server/page_config/page_config',
-    layout: 'main',
+    layout: 'main_test',
     description: '',
     // controller: 'rules/index',
     requireType: 'GET'

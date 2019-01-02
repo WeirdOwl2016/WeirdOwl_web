@@ -2,7 +2,7 @@
  * @Author: yueLanFengHua
  * @Date: 2018-10-10 16:58:54
  * @Last Modified by: WeirdOwl
- * @Last Modified time: 2018-12-28 17:03:57
+ * @Last Modified time: 2019-01-02 13:24:06
  */
 const HtmlWebpackPlugin = require('html-webpack-plugin') // 是生成html文件
 
@@ -101,4 +101,4 @@ function getEntry () {
     plugins: plugins
   }
 }
-module.exports = getEntry()
+module.exports = getEntry

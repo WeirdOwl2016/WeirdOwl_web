@@ -59,7 +59,7 @@ var imgLoader = {
 myPluginshtml.entry.conmmon = './src/web/assets/js/index.js'
 module.exports = {
   mode: 'development', // development  production
-  entry: myPluginshtml.entry,
+  entry: {...myPluginshtml().entry, conmmon: './src/web/assets/js/index.js'},
   output: {
     filename: '[name].[chunkhash].js',
     publicPath: '{{staticURL}}/',

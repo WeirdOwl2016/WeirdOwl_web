@@ -35,6 +35,7 @@
     "css-loader": "^1.0.0",
     "es6-promise": "^4.1.1",
     "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-plugin-html": "^3.0.0",

@@ -25,7 +25,7 @@ module.exports = [
     view: 'document/server/install_doc/install_doc',
     layout: 'main_doc',
     description: '',
-    // controller: 'rules/index',
+    controller: 'document/page',
     requireType: 'GET'
   },
   {
@@ -34,7 +34,7 @@ module.exports = [
     view: 'document/server/page_config/page_config',
     layout: 'main_doc',
     description: '',
-    // controller: 'rules/index',
+    controller: 'document/page',
     requireType: 'GET'
   }
 ]

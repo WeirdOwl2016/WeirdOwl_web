@@ -139,9 +139,6 @@ module.exports = {
     }
   },
   _if: function () {
-    // for(var i in arguments){
-    //     console.log(arguments[i])
-    // }
     let options = arguments[arguments.length - 1]
     let evalStr = ''
     let symbol = ['<', '>', '==', '===', '&&', '||', '>=', '<=', ')', '(', '-', '+', '!', '!=', '!==', 'undefined', 'null']

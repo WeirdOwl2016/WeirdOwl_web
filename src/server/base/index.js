@@ -2,7 +2,7 @@
  * @Author: WeirdOwl
  * @Date: 2018-12-24 17:49:04
  * @Last Modified by: WeirdOwl
- * @Last Modified time: 2018-12-28 09:47:30
+ * @Last Modified time: 2019-01-02 16:20:28
  */
 // express jade
 // res.render('index',{title:"hehe",test:"23"})
@@ -23,7 +23,7 @@ const handel = (req, url, base, cb) => {
     cb()
     return false
   }
-  console.error(req.method)
+  // console.error(req)
   const _req = {
     ...url,
     fullUrl: req.url,

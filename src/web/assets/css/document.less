@@ -36,10 +36,11 @@ body{
 }
 
 .docleft{
-    width:200px;
+    width:180px;
     height:100%;
     padding:0 10px;
     overflow: auto;
+    .black_c(@color1);
     h1{
        .lh_center(80);
        width:190px;
@@ -51,11 +52,16 @@ body{
         .ptop(80);
     }
     dt {
-        .lh_center(50);
+        .lh_center(18);
+        margin: 15px 0;
         font-weight: bold;
+        .border_l(3, @color5);
+        .pleft(5);
     }
     dd{
         .lh_center(28);
+        .pleft(5);
+        
     }
     .on{
         .c(@color5);

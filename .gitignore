@@ -1,2 +1,4 @@
 dist
 *.log
+logs
+node_modules/
